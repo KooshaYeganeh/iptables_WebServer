@@ -6,8 +6,18 @@ This script make config like block unnecessary ports and install dependencies an
 
 # Install
 
+cd /opt
+
+wget ttps://github.com/kooshakoosha/iptables_WebServer/archive/refs/heads/main.zip
+
+unzip main.zip
+
+./install
 
 
 
+# Run
+
+iptables-config
 
 
