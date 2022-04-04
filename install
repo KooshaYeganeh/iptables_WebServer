@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+wget=`whereis wget | cut -d":" -f2`
+
+if [ "$wget" ];then
+	true
+else
+	sudo dnf install wget
+fi
+
+cd /opt
+
+wget https://github.com/kooshakoosha/iptables_WebServer/archive/refs/heads/main.zip
+
+unzip main.zip
+
+cd iptables_WebServer-main
+
+chmod 755 iptables-config
+
+sudo cp iptables-config /usr/bin/
+
+
